@@ -5,7 +5,7 @@ date: 2016-11-13
 categories:
   - Life
 description: 
-image: /himages/hello-world.jpg
-image-sm: /himages/hello-world.jpg
+image: /assets/images/hello-world.jpg
+image-sm: /assets/images/hello-world-sm.jpg
 ---
 受够了
