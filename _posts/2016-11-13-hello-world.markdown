@@ -7,6 +7,7 @@ categories:
 description: 
 image: /assets/images/hello-world.jpg
 image-sm: /assets/images/hello-world-sm.jpg
+comments: true
 ---
 ### Hello GitHub Pages
 
