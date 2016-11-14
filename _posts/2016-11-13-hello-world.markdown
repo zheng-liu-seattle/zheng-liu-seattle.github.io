@@ -8,16 +8,7 @@ description:
 image: /assets/images/hello-world.jpg
 image-sm: /assets/images/hello-world-sm.jpg
 ---
-# Hello Markdown & GitHub Pages
+# Hello GitHub Pages
 
-之前的blog是在cloudatcost, 验证了之前的古话：
-
-> 便宜没好货
-
-不停的down机，每个ticket都是sev1，但是平均处理时间都是3-4天，终于受不了，投奔到了Github Pages。
-
-以后有机会，慢慢把之前的blog内容慢慢挪过来，刚去了start up，忙。
-
-希望一切都顺利。
-
+受不了之前的host provider，不停的down机，终于换成了github pages，等有空慢慢把以前的内容搬过来，第一篇，先这样了，生活总是很忙。
 
