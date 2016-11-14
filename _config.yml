@@ -1,19 +1,19 @@
 # Site settings
-email: 
+email: "iuserock0@gmail.com"
 baseurl: ""
 paginate: 5
 paginate_path: "/blog/page-:num"
-google_analytics: 
+google_analytics: "UA-20996874-1"
 
 # SEO settings
-title: Trophy
+title: "Jasper Up"
 description: 
 url: ""
 twitter_username: 
 default_img: 
 
 # Profile settings
-name: 
+name: "Zheng"
 profile_img: 
 profile: 
 social:
