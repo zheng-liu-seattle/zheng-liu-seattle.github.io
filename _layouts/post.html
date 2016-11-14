@@ -14,7 +14,7 @@ layout: default
       <h1 itemprop="name headline">{{ page.title }}</h1>
       {% if page.categories.size > 0 %}
         <span>
-          Posted123132 in {{ page.categories | join: ', ' }}
+          Posted in {{ page.categories | join: ', ' }}
         </span>
       {% endif %}
       <span></span>
@@ -48,6 +48,7 @@ layout: default
 
 </article>
 {% if page.comments %} 
+<div id="disqus_thread"></div>
 <script>
 
 /**
@@ -67,7 +68,9 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 {% endif %}
+
 {% if page.previous.url %}
   <section class="next">
     <a class="next__link" href="{{page.previous.url | prepend: site.baseurl }}" style="background-image: url('{{ page.previous.image }}');">
