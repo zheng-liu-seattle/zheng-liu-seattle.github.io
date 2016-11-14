@@ -14,10 +14,10 @@ default_img:
 
 # Profile settings
 name: "Zheng"
-profile_img: 
-profile: 
+profile_img: /assets/images/profile.jpg
+profile: "Zheng (lzbob) was born in Beijing, China, and moved to Unite States, have been Phoenix 4 years, and currently living in Seattle and working @Grab. He is not fat, just a ball."
 social:
-  github: 
+  github: https://github.com/zheng-liu-seattle
 
 # Build settings
 include: ["_categories"]
