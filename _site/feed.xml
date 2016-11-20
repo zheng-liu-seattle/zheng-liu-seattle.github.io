@@ -5,26 +5,65 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 13 Nov 2016 16:07:14 -0800</pubDate>
-    <lastBuildDate>Sun, 13 Nov 2016 16:07:14 -0800</lastBuildDate>
+    <pubDate>Tue, 15 Nov 2016 00:11:45 -0800</pubDate>
+    <lastBuildDate>Tue, 15 Nov 2016 00:11:45 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>Craft Beer</title>
-        <description>&lt;p&gt;Tbh vaporware mumblecore iceland echo park DIY. Plaid woke next level enamel pin, vegan cred salvia pug. XOXO sartorial synth gluten-free, cold-pressed mumblecore craft beer helvetica. Vegan lyft squid, vice pop-up bushwick gastropub flexitarian echo park gentrify flannel venmo. Banh mi ugh direct trade, tote bag irony tbh biodiesel. Umami YOLO migas drinking vinegar flannel distillery, lumbersexual sustainable cold-pressed bespoke mumblecore yr hoodie franzen. Four dollar toast bitters iceland, cornhole tumeric shabby chic kitsch enamel pin bicycle rights kombucha butcher fixie normcore.&lt;/p&gt;
+        <title>Options 101</title>
+        <description>&lt;h3 id=&quot;options-101&quot;&gt;Options 101&lt;/h3&gt;
 
-&lt;p&gt;Sartorial kale chips keytar freegan craft beer, tilde put a bird on it post-ironic knausgaard everyday carry aesthetic. Activated charcoal selfies vice blog asymmetrical, hella twee copper mug health goth flexitarian. Tattooed pickled cold-pressed, PBR&amp;amp;B hell of schlitz seitan. Retro williamsburg schlitz health goth messenger bag roof party. Migas fanny pack chillwave chambray. Post-ironic roof party wolf ethical. Tacos PBR&amp;amp;B beard, lumbersexual retro DIY tumeric selvage brunch.&lt;/p&gt;
+&lt;p&gt;把之前整理的期权相关的知识再次整理一下，增强记忆和理解。&lt;/p&gt;
 
-&lt;p&gt;Gentrify locavore selfies fam bicycle rights, biodiesel kombucha fixie vape lomo fanny pack mumblecore letterpress leggings kale chips. Biodiesel typewriter mlkshk man braid. Ugh fap snackwave microdosing synth live-edge. Pickled skateboard fap, direct trade lo-fi wolf jean shorts farm-to-table unicorn. Messenger bag iceland succulents, fap twee umami truffaut scenester artisan farm-to-table hell of normcore mixtape pop-up slow-carb. Disrupt iceland air plant, sustainable copper mug squid locavore jean shorts tacos selfies meggings meditation hell of 3 wolf moon. Schlitz thundercats lyft raclette green juice intelligentsia.&lt;/p&gt;
+&lt;h4 id=&quot;long-call&quot;&gt;买入看涨期权（Long Call）：看涨股票时，一般可以买入看涨期权&lt;/h4&gt;
 
-&lt;p&gt;Four loko pinterest lo-fi beard kinfolk marfa. Man bun flannel activated charcoal blue bottle. Chillwave coloring book waistcoat hammock knausgaard selfies. Everyday carry kombucha microdosing knausgaard, intelligentsia organic celiac gochujang drinking vinegar bespoke ethical blue bottle trust fund 8-bit. Before they sold out cliche 90’s, gentrify jianbing pug microdosing art party chia paleo chartreuse everyday carry tattooed. Listicle taxidermy art party migas tote bag meditation, farm-to-table PBR&amp;amp;B. Poutine vaporware letterpress hell of.&lt;/p&gt;
+&lt;p&gt;买入看涨期权意味着将来某个时间点你有权在特定的价格买入这支股票。
+例：假如你在2011年12月29日，以每合约$15.15的价格买入了GOOG的2012年1月的行权价为$650的看涨期权。2011年12月29日时GOOG的价格是$636，你的操作是：”buy to open GOOG-JAN-2012-$650-Calls”。代表你看涨GOOG，认为在2012年1月的行权日前GOOG会涨到$650以上。&lt;/p&gt;
+
+&lt;p&gt;buy to open calls&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;买入看跌期权（Long Put）：看跌股票时，一般可以买入看跌期权&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;买入看跌期权意味着将来某个时间点你有权在特定的价格卖入这支股票。&lt;/p&gt;
+
+&lt;p&gt;buy to open put&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;卖出看涨期权（Short Call）：看跌股票时，可以卖出看涨期权。高风险&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;就像卖空股票似的，你卖出看涨期权，你不是花钱去买，而一开始是收钱。假如ABC这支股票的价格是$40，你以每合约$2.00，卖出了10个下个月的$45的看涨期权。（你是把下月行权日时以$45买入1000股ABC的权利卖出了。卖给谁你不需要管）这样你将收入$2000。别高兴太早，因为这$2000还不一定是你的呢。当下个月的行权日时，ABC的股价没有超过$45时，这$2000才属于你。但如果ABC的股价超过$45，你就需要被迫执行你卖出的看涨期权—（拥有你卖出的这个权利的人要求你）以$45卖出1000股ABC股票。如果在你的帐号没有1000股ABC的股票，你就必须从市场上以市场价买入1000股ABC，再卖出。这是最大的风险，因为在市场上ABC的股价已经超过了$45，可能是$55,可能是$145，也有可能是天价。当然行权日前在ABC股价上涨接近$45时，你可以选择平仓–买回卖出的看跌期权。这种情况的损失根据具体情况再分析。没有任何保护的卖出看涨期权，风险可能是你无法承受的大。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;卖出看跌期权（Short Put）：看涨股票时，可以卖出看跌期权。高风险&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;同理你卖出看跌期权， 一开始是收钱的，但这钱还不一定是你的。还是以ABC股票为例，股价$40, 你以每合约$2.00，卖出了10个下个月的$35的看跌期权。这样你将收入$2000。（你是把下月行权日时以$35卖出1000股ABC的权利卖出了。）同样这$2000到下月行权日前暂时属于你。当下个月行权日时ABC没有跌过$35时，这$2000才是你的。如果ABC跌过了$35，你就需要被迫执行你卖出的看跌期权—（拥有你卖出的这个权利的人要求你）以$35买入1000股ABC股票，即使市场上的ABC已经一钱不值。没有任何保护的卖出看跌期权，最大风险就是你要按执行价格买入股票。&lt;/p&gt;
 </description>
-        <pubDate>Wed, 07 Sep 2016 00:00:00 -0700</pubDate>
-        <link>/2016/09/07/craft-beer/</link>
-        <guid isPermaLink="true">/2016/09/07/craft-beer/</guid>
+        <pubDate>Tue, 15 Nov 2016 00:00:00 -0800</pubDate>
+        <link>/2016/11/15/options-101/</link>
+        <guid isPermaLink="true">/2016/11/15/options-101/</guid>
         
         
-        <category>Juice</category>
+        <category>Money</category>
+        
+      </item>
+    
+      <item>
+        <title>Hello World</title>
+        <description>&lt;h3 id=&quot;hello-github-pages&quot;&gt;Hello GitHub Pages&lt;/h3&gt;
+
+&lt;p&gt;受不了之前的host provider，不停的down机，终于换成了github pages，等有空慢慢把以前的内容搬过来，第一篇，先这样了，生活总是很忙。&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 13 Nov 2016 00:00:00 -0800</pubDate>
+        <link>/2016/11/13/hello-world/</link>
+        <guid isPermaLink="true">/2016/11/13/hello-world/</guid>
+        
+        
+        <category>Life</category>
         
       </item>
     

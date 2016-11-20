@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Options 101 | Jasper Up</title>
+  <meta name="author" content="Zheng">
+  <meta name="description" content="">
+  <meta property="og:title" content="Options 101 | Jasper Up">
+  <meta property="og:url" content="/2016/11/15/options-101/">
+  <meta property="og:site_name" content="Jasper Up">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/assets/images/options-101.jpg">
+  <meta property="og:type" content="blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Options 101 | Jasper Up">
+  <meta name="twitter:url" content="/2016/11/15/options-101/">
+  <meta name="twitter:site" content="Jasper Up">
+  <meta name="twitter:creator" content="@">
+  <meta name="twitter:domain" content="">
+  <meta property="twitter:image" content="/assets/images/options-101.jpg">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata|Lora|Space+Mono:700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Jasper Up" href="/feed.xml">
+  <link rel="canonical" href="/2016/11/15/options-101/">
+
+  
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-20996874-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  
+</head>
+
+
+  <body>
+
+    <main>
+      <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="section-padding--lg mast">
+    <a class="nav nav--white" href="/">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Posts</span>
+    </a>
+    <figure class="absolute-bg mast__img" style="background-image: url('/assets/images/options-101.jpg');"></figure>
+    <div class="mast__container">
+      <span><time datetime="2016-11-15T00:00:00-08:00" itemprop="datePublished">Nov 15, 2016</time></span>
+      <h1 itemprop="name headline">Options 101</h1>
+      
+        <span>
+          Posted in Money
+        </span>
+      
+      <span></span>
+    </div>
+  </header>
+
+  <section class="section-padding post" itemprop="articleBody">
+    <h3 id="options-101">Options 101</h3>
+
+<p>把之前整理的期权相关的知识再次整理一下，增强记忆和理解。</p>
+
+<h4 id="long-call">买入看涨期权（Long Call）：看涨股票时，一般可以买入看涨期权</h4>
+
+<p>买入看涨期权意味着将来某个时间点你有权在特定的价格买入这支股票。
+例：假如你在2011年12月29日，以每合约$15.15的价格买入了GOOG的2012年1月的行权价为$650的看涨期权。2011年12月29日时GOOG的价格是$636，你的操作是：”buy to open GOOG-JAN-2012-$650-Calls”。代表你看涨GOOG，认为在2012年1月的行权日前GOOG会涨到$650以上。</p>
+
+<p>buy to open calls</p>
+
+<ul>
+  <li>买入看跌期权（Long Put）：看跌股票时，一般可以买入看跌期权</li>
+</ul>
+
+<p>买入看跌期权意味着将来某个时间点你有权在特定的价格卖入这支股票。</p>
+
+<p>buy to open put</p>
+
+<ul>
+  <li>卖出看涨期权（Short Call）：看跌股票时，可以卖出看涨期权。高风险</li>
+</ul>
+
+<p>就像卖空股票似的，你卖出看涨期权，你不是花钱去买，而一开始是收钱。假如ABC这支股票的价格是$40，你以每合约$2.00，卖出了10个下个月的$45的看涨期权。（你是把下月行权日时以$45买入1000股ABC的权利卖出了。卖给谁你不需要管）这样你将收入$2000。别高兴太早，因为这$2000还不一定是你的呢。当下个月的行权日时，ABC的股价没有超过$45时，这$2000才属于你。但如果ABC的股价超过$45，你就需要被迫执行你卖出的看涨期权—（拥有你卖出的这个权利的人要求你）以$45卖出1000股ABC股票。如果在你的帐号没有1000股ABC的股票，你就必须从市场上以市场价买入1000股ABC，再卖出。这是最大的风险，因为在市场上ABC的股价已经超过了$45，可能是$55,可能是$145，也有可能是天价。当然行权日前在ABC股价上涨接近$45时，你可以选择平仓–买回卖出的看跌期权。这种情况的损失根据具体情况再分析。没有任何保护的卖出看涨期权，风险可能是你无法承受的大。</p>
+
+<ul>
+  <li>卖出看跌期权（Short Put）：看涨股票时，可以卖出看跌期权。高风险</li>
+</ul>
+
+<p>同理你卖出看跌期权， 一开始是收钱的，但这钱还不一定是你的。还是以ABC股票为例，股价$40, 你以每合约$2.00，卖出了10个下个月的$35的看跌期权。这样你将收入$2000。（你是把下月行权日时以$35卖出1000股ABC的权利卖出了。）同样这$2000到下月行权日前暂时属于你。当下个月行权日时ABC没有跌过$35时，这$2000才是你的。如果ABC跌过了$35，你就需要被迫执行你卖出的看跌期权—（拥有你卖出的这个权利的人要求你）以$35买入1000股ABC股票，即使市场上的ABC已经一钱不值。没有任何保护的卖出看跌期权，最大风险就是你要按执行价格买入股票。</p>
+
+  </section>
+
+  <section class="profile">
+    <div class="profile__card">
+      <div class="profile__img">
+        <figure class="absolute-bg" style="background-image: url('/assets/images/profile.jpg');"></figure>
+      </div>
+      <div class="profile__container">
+        <p>Zheng (lzbob) was born in Beijing, China, and moved to Unite States, have been Phoenix 4 years, and currently living in Seattle and working @Grab. He is not fat, just a ball.</p>
+        
+          <ul class="profile__social">
+            
+              <li><a class="fa fa-lg fa-envelope-o" href="mailto:iuserock0@gmail.com"></a></li>
+            
+            
+              <li><a class="fa fa-lg fa-github" href="https://github.com/zheng-liu-seattle" target="_blank"></a></li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </section>
+
+</article>
+ 
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//jasperup-com.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+  <section class="next">
+    <a class="next__link" href="/2016/11/13/hello-world/" style="background-image: url('/assets/images/hello-world.jpg');">
+      <div class="next__container">
+        <span>Read Next</span>
+        <h2>Hello World</h2>
+      </div>
+    </a>
+  </section>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="/assets/js/app.js"></script>
+
+
+  </body>
+
+</html>
