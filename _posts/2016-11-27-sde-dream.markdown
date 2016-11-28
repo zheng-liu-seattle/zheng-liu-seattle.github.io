@@ -1,0 +1,35 @@
+---
+layout: post
+title: "一个小程序猿的梦想"
+date: 2016-11-27
+categories:
+  - Life
+description: 
+image: /assets/images/sde-dream.jpg
+image-sm: /assets/images/sde dream-sm.jpg
+comments: true
+---
+
+曾几何时，做为程序猿的我，也曾经有过梦想，有过去实现这个梦想的激情。
+
+每个程序员肯定都有梦想，什么bug-free code，pm都去死，或者startup，但是我的梦想很简单很实际，就是利用业余的时间，做一些app，符合以下要求:
+
+* 自己需要的
+* 市面上没有，或者死贵的
+
+仅此而已，其实真的很简单。
+
+自从2009年踏上iOS的贼船，陆陆续续做过一些iOS的app，包括第一个在ipad上的画画app，在ios上可以随便听歌下载歌曲（只是cache）的mp3 app，没有pm，没有designer，都是自己觉得需要，就做了。
+
+随着weibo的兴起，我也是刷weibo一族，手机刷完，网页刷，但是总觉得差点什么，对，desktop app。当时，mac上weibo有官方的app，是用Adobe Air做的，一个cheap的公司，做的app注定也是cheap的，除此之外，还有几个不火的native应用，但是都不符合我的要求，于是开始了做WeiLark之旅。
+
+最开始从0到1，是和我的好兄弟一起做的，当他听到我的idea的时候，一拍即合，这是我做的第一个mac app，我俩都是非著名码农，但是很快就做出了第一个版本。这个app曾经在App Store China mainland 区常年排在免费排行榜的前几名。
+
+由此可见，梦想很简单，做自己想要的，需要的，然后大家一起用，不挣一分钱，不出一丝名。关于这个app，虽然回首看code，简直忍无可忍，但是是我目前做过的最happpy的一个app，因为我不是一个人在战斗，有时候，真的很想他，不知道他怎么样了，虽然我们此时的距离不超过一英里。
+
+![WeiLark](/assets/images/weilark.jpg)
+
+曾经的梦想，已经远去了好久，是时候追回来了。
+
+Follow your passion.
+
