@@ -14,7 +14,7 @@ comments: true
 
 * 定义自己的异常，必须继承Error，可以通过自定义参数，传达一些信息
 
-	~~~swift
+	~~~ swift
 	enum FetchMoneyError: Error {
 		case insurricientFunds(moneyNeeded: Int)
 		case notMyMoney
