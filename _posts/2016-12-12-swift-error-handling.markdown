@@ -14,7 +14,7 @@ comments: true
 
 * 定义自己的异常，必须继承Error，可以通过自定义参数，传达一些信息
 
-	```swift
+	~~~swift
 	enum FetchMoneyError: Error {
 		case insurricientFunds(moneyNeeded: Int)
 		case notMyMoney
@@ -22,19 +22,19 @@ comments: true
 	
 	throw FetchMoneyError.insurricientFunds(moneyNeeded: 100)
 	throw FetchMoneyError. notMyMoney
-	```
+	~~~
 	
 # Hanlding Errors
 
 ## 向上传递异常
-	```swift
+	~~~swift
 	func canThrowErrors() throws -> String
 	func cannotThrowErrors() -> String
-	```
+	~~~
 	抛出异常的function，叫做 *throwing function*
 	
 ## Do Catch
-	```swift
+	~~~swift
 	do {
 		try ...
 	} catch pattern {
@@ -42,25 +42,25 @@ comments: true
 	} catch {
 		...
 	}
-	```
+	~~~
 	
 ## Use Optional
-	```swift
+	~~~swift
 		let x = try? getMoney()
-	```
+	~~~
 	如果getMoney抛出异常，x就是nil
 	
 ## Use !
-	```swift
+	~~~swift
 		let y = try! getMoney()
-	```
+	~~~
 	
 ## Cleanup Actions
-	```swift
+	~~~swift
 	defer {
 		...
 	}
-	```
+	~~~
 	和Java里面的final类似，不管程序怎么样，保证当前scope内最后会被执行。如果定义了多个defer，按照定义的反向顺序执行
 		
 
