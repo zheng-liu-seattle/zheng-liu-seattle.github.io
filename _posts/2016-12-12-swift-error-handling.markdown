@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Swift Error Handling"
-date: 2016-12-4
+date: 2016-12-12
 categories:
   - iOS
 description: 
