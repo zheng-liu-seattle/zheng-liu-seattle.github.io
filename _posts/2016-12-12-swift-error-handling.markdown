@@ -14,7 +14,7 @@ comments: true
 
 * 定义自己的异常，必须继承Error，可以通过自定义参数，传达一些信息
 
-	~~~ swift
+	``` swift
 	enum FetchMoneyError: Error {
 		case insurricientFunds(moneyNeeded: Int)
 		case notMyMoney
@@ -22,15 +22,15 @@ comments: true
 	
 	throw FetchMoneyError.insurricientFunds(moneyNeeded: 100)
 	throw FetchMoneyError. notMyMoney
-	~~~
+	```
 	
 # Hanlding Errors
 
 ## 向上传递异常
-	~~~swift
+	```
 	func canThrowErrors() throws -> String
 	func cannotThrowErrors() -> String
-	~~~
+	```
 	抛出异常的function，叫做 *throwing function*
 	
 ## Do Catch
