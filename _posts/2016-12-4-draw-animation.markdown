@@ -18,7 +18,7 @@ comments: true
 * **CGMutablePath** 
 通过CGMutablePath来定义想要画画的路径 [Apple Doc](https://developer.apple.com/reference/coregraphics/cgmutablepath)
 
-	* ```func move(to point: CGPoint, transform: CGAffineTransform = default)``` 
+	* {% highlight swift %} func move(to point: CGPoint, transform: CGAffineTransform = default) {% endhighlight %} 
 	把当前画笔的点挪到指定的点
 	* ```func addLine(to point: CGPoint, transform: CGAffineTransform = default)```
 	从当点的点，到指定的点，画一个线
