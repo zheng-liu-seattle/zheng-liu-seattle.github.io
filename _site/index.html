@@ -54,6 +54,8 @@
       <section class="previews">
   <div>
     
+      <figure class="absolute-bg preview__img" style="background-image: url('/assets/images/xcode.jpg');"></figure>
+    
       <figure class="absolute-bg preview__img" style="background-image: url('/assets/images/swagger.jpg');"></figure>
     
       <figure class="absolute-bg preview__img" style="background-image: url('/assets/images/xcode.jpg');"></figure>
@@ -61,8 +63,6 @@
       <figure class="absolute-bg preview__img" style="background-image: url('/assets/images/xcode.jpg');"></figure>
     
       <figure class="absolute-bg preview__img" style="background-image: url('/assets/images/sde-dream.jpg');"></figure>
-    
-      <figure class="absolute-bg preview__img" style="background-image: url('/assets/images/beijing-snow.jpg');"></figure>
     
     <div class="previews__container">
       <span>Welcome to</span>
@@ -80,6 +80,15 @@
 
     <div class="tab">
       <ul itemscope itemtype="http://schema.org/Blog">
+        
+          <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <a class="preview__link" href="/2016/12/31/swift-protocol-extension/" itemprop="url">
+              <span class="preview__date" itemprop="datePublished" datetime="2016-12-31T00:00:00-08:00">Dec 31, 2016</span>
+              <h2 class="preview__header" itemprop="name">Why I love Swift protocol extension</h2>
+              <p class="preview__excerpt" itemprop="description">Swift 是一个Protocol Oriented Programming Language Swift 从一开始，就强调了这是一个面向protocol的语言，之前一直没有理解，但是当在工作中用到了protocol extension以后，才终于理解了。 protocol extension解决了面向对象一直没有解决的问题，在单继承的情况下，总有一些子类会继承没有用的方法，举个例子更明白些： class Dog: Mammal { } class Mammal { func breathe() { ... } } 看上去是正确的OO设计，狗是哺乳动物，因为所有的哺乳动物都可以呼吸，所以狗继承哺乳类，是天经地义的。但是如果这个时候PM跑过来说，我们想要狗能实现’run’这个方法，那应该在哪里实现呢？如果在’Mammal class’实现，那么’whale class’就会有问题，因为鲸鱼是哺乳动物，但是不会跑，那如果在’dog class’实现，那么’cat class’呢？难道也要实现一遍？我们既要遵守DRY(Don’t repeat...</p>
+              <span class="preview__more">Read More</span>
+            </a>
+          </li>
         
           <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
             <a class="preview__link" href="/2016/12/30/swagger/" itemprop="url">
@@ -142,22 +151,6 @@ Follow your passion.
             </a>
           </li>
         
-          <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-            <a class="preview__link" href="/2016/11/22/beijing-snow/" itemprop="url">
-              <span class="preview__date" itemprop="datePublished" datetime="2016-11-22T00:00:00-08:00">Nov 22, 2016</span>
-              <h2 class="preview__header" itemprop="name">北京 - 雪</h2>
-              <p class="preview__excerpt" itemprop="description">北京，又下雪了。
-
-其实，有高原红的我，本来是不喜欢雪的，因为这意味着我的大脸又要红扑扑的了。但是我却是一直盼望下雪，因为，下雪就可以不上体育课了，一个胖子的心声，估计大多人都不懂。
-
-出国十年，每次看到北京初雪的照片，都分外想家，想故宫的角楼，想鼓楼的钟楼，想冬天里的糖葫芦，只有看照片解馋。
-
-想北京了。
-</p>
-              <span class="preview__more">Read More</span>
-            </a>
-          </li>
-        
       </ul>
 
       
@@ -209,13 +202,13 @@ Follow your passion.
           
             <div class="card__img">
               
-                <figure class="absolute-bg" style="background-image: url('/assets/images/swagger-sm.jpg');"></figure>
+                <figure class="absolute-bg" style="background-image: url('/assets/images/xcode-sm.jpg');"></figure>
               
             </div>
           
           <div class="card__container">
             <h2 class="card__header">iOS</h2>
-            <p class="card__count">3 Posts</p>
+            <p class="card__count">4 Posts</p>
             <span class="card__more">View All</span>
           </div>
         </a>
