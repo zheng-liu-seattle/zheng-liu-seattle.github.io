@@ -1,0 +1,86 @@
+---
+layout: post
+title: "Swagger, silver bullet"
+date: 2016-12-30
+categories:
+  - iOS
+description: 
+image: /assets/images/swagger.jpg
+image-sm: /assets/images/swagger-sm.jpg
+comments: true
+---
+
+## Swagger is a framework to help design/document/code Restful API.
+
+### Benefits
+
+* 1.Quickly create RESTful APIs
+* 2.Client code is auto generated, can be used like a SDK in mobile （Android and iOS)
+* 3.Swagger UI is friendly for consumer to understand the API (better documentation)
+* 4.Backend team could use Swagger UI to automated/manually test for the API. (like a web version of Postman)
+
+
+### Steps to integrate swagger generated SDK for mobile app.
+
+* 1.Look up the YAML/JSON which describe the RESTful API, you could get it from backend engineer
+* 2.Go to http://editor.swagger.io/#/, paste the YAML/JSON to left column
+* 3.On the same webpage, click - Generate Client -> Swift/Objective-C/Swift 3 to download the file
+* 4.Unzip the file, put them to PAX project root folder, make sure the source code folder and . podspec file are in the same folder (use folder name "SwaggerClient" as example)
+* Edit Podfile, add 
+
+```bash
+pod "SwaggerClient", :path => "SwaggerClient/"
+``` 
+
+* Run 
+
+```bash
+pod install
+``` 
+
+* 5.Verify if it installed successfully
+   Check Pods project, you should be able to see DevelopmentPods folder which contains the SwaggerClient.
+
+### Steps to custimze the code
+
+Swagger Codegen is using [_Mustache_](https://mustache.github.io) as template to generate code, so to customize the code generated, we don't need to touch the source code of Swagger Codegen.
+
+* 1.Install Swagger Codegen 
+    Home Brew:  
+
+```bash
+brew install swagger-codegen
+``` 
+
+Or follow the [instruction](https://github.com/swagger-api/swagger-codegen#compatibility) to install through build source code (maven), docker
+
+* 2.Modify templates
+
+The templates are located at swagger-codegen/modules/swagger-codegen/src/main/resources, if installed from home brew, you can download them from [here](https://github.com/swagger-api/swagger-codegen/tree/master/modules/swagger-codegen/src/main/resources). After modified the templates, put the templates inside a folder somewhere in the disk.
+
+* 3.Generate code 
+
+Command for HomeBrew:
+
+```bash 
+swagger-codegen generate -i <SWAGGER definition> -l ruby -o /tmp/test/ -t <TEMPLATE FOLDER>
+``` 
+
+Command for source code build:
+
+```bash 
+java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate -i <SWAGGER definition> -l swift -o SwaggerClient -t <TEMPLATE FOLDER>
+``` 
+
+### Workflow with Swagger
+
+#### For Web Service Owner
+
+* Every time server side changes, generate updated Swagger RESTful API definition file (yml or JSON) . It could be generated automatically
+* Notify mobile team after testing
+
+#### For Web Service Consumer (Mobile)
+* Use Swagger UI or command to generate the mobile SDK (iOS or Android), update the SDK in mobile project, run pod install.
+
+	
+	
