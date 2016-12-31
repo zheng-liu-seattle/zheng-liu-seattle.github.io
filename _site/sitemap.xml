@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/2016/11/15/options-101/</loc>
-<lastmod>2016-11-15T00:00:00-08:00</lastmod>
+<loc>/2016/12/12/swift-error-handling/</loc>
+<lastmod>2016-12-12T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>/2016/12/04/draw-animation/</loc>
+<lastmod>2016-12-04T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>/2016/11/27/sde-dream/</loc>
+<lastmod>2016-11-27T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>/2016/11/22/beijing-snow/</loc>
+<lastmod>2016-11-22T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>/2016/11/20/tldr/</loc>
+<lastmod>2016-11-20T00:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>/2016/11/19/value-time/</loc>
+<lastmod>2016-11-19T00:00:00-08:00</lastmod>
 </url>
 <url>
 <loc>/2016/11/13/hello-world/</loc>
@@ -25,5 +45,8 @@
 </url>
 <url>
 <loc>/category/money/</loc>
+</url>
+<url>
+<loc>/blog/page-2/</loc>
 </url>
 </urlset>

@@ -30,6 +30,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
 
   <link rel="alternate" type="application/rss+xml" title="Jasper Up" href="/feed.xml">
   <link rel="canonical" href="/category/money/">
@@ -57,8 +58,6 @@
       <span>Back to Posts</span>
     </a>
     
-      <figure class="absolute-bg preview__img" style="background-image: url('/assets/images/options-101.jpg');"></figure>
-    
     <div class="previews__container">
       <span>Category</span>
       <h1>Money</h1>
@@ -75,45 +74,6 @@
 
     <div class="tab">
       <ul itemscope itemtype="http://schema.org/Blog">
-        
-          <li class="preview" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-            <a class="preview__link" href="/2016/11/15/options-101/" itemprop="url">
-              <span class="preview__date" itemprop="datePublished" datetime="2016-11-15T00:00:00-08:00">Nov 15, 2016</span>
-              <h2 class="preview__header" itemprop="name">Options 101</h2>
-              <p class="preview__excerpt" itemprop="description">Options 101
-
-把之前整理的期权相关的知识再次整理一下，增强记忆和理解。
-
-买入看涨期权（Long Call）：看涨股票时，一般可以买入看涨期权
-
-买入看涨期权意味着将来某个时间点你有权在特定的价格买入这支股票。
-例：假如你在2011年12月29日，以每合约$15.15的价格买入了GOOG的2012年1月的行权价为$650的看涨期权。2011年12月29日时GOOG的价格是$636，你的操作是：”buy to open GOOG-JAN-2012-$650-Calls”。代表你看涨GOOG，认为在2012年1月的行权日前GOOG会涨到$650以上。
-
-buy to open calls
-
-
-  买入看跌期权（Long Put）：看跌股票时，一般可以买入看跌期权
-
-
-买入看跌期权意味着将来某个时间点你有权在特定的价格卖入这支股票。
-
-buy to open put
-
-
-  卖出看涨期权（Short Call）：看跌股票时，可以卖出看涨期权。高风险
-
-
-就像卖空股票似的，你卖出看涨期权，你不是花钱去买，而一开始是收钱。假如ABC这支股票的价格是$40，你以每合约$2.00，卖出了10个下个月的$45的看涨期权。（你是把下月行权日时以$45买入1000股ABC的权利卖出了。卖给谁你不需要管）这样你将收入$2000。别高兴太早，因为这$2000还不一定是你的呢。当下个月的行权日时，ABC的股价没有超过$45时，这$2000才属于你。但如果ABC的股价超过$45，你就需要被迫执行你卖出的看涨期权—（拥有你卖出的这个权利的人要求你）以$45卖出1000股ABC股票。如果在你的帐号没有1000股ABC的股票，你就必须从市场上以市场价买入1000股ABC，再卖出。这是最大的风险，因为在市场上ABC的股价已经超过了$45，可能是$55,可能是$145，也有可能是天价。当然行权日前在ABC股价上涨接近$45时，你可以选择平仓–买回卖出的看跌期权。这种情况的损失根据具体情况再分析。没有任何保护的卖出看涨期权，风险可能是你无法承受的大。
-
-
-  卖出看跌期权（Short Put）：看涨股票时，可以卖出看跌期权。高风险
-
-
-同理你卖出看跌期权， 一开始是收钱的，但这钱还不一定是你的。还是以ABC股票为例，股价$40, 你以每合约$2.00，卖出了10个下个月的$35的看跌期权。这样你将收入$2000。（你是把下月行权日时以$35卖出1000股ABC的权利卖出了。）同样这$2000到下月行权日前暂时属于你。当下个月行权日时ABC没有跌过$35时，这$2000才是你的。如果ABC跌过了$35，你就需要被迫执行你卖出的看跌期权—（拥有你卖出的这个权利的人要求你）以$35买入1000股ABC股票，即使市场上的ABC已经一钱不值。没有任何保护的卖出看跌期权，最大风险就是你要按执行价格买入股票。
-</p>
-              <span class="preview__more">Read More</span>
-            </a>
-          </li>
         
       </ul>
 
@@ -138,13 +98,13 @@ buy to open put
           
             <div class="card__img">
               
-                <figure class="absolute-bg" style="background-image: url('/assets/images/hello-world-sm.jpg');"></figure>
+                <figure class="absolute-bg" style="background-image: url('/assets/images/sde dream-sm.jpg');"></figure>
               
             </div>
           
           <div class="card__container">
             <h2 class="card__header">Life</h2>
-            <p class="card__count">1 Posts</p>
+            <p class="card__count">5 Posts</p>
             <span class="card__more">View All</span>
           </div>
         </a>
@@ -152,17 +112,17 @@ buy to open put
     
       
       <li class="card">
-        <a class="card__link" href="/category/money/">
+        <a class="card__link" href="/category/ios/">
           
             <div class="card__img">
               
-                <figure class="absolute-bg" style="background-image: url('/assets/images/options-101-sm.jpg');"></figure>
+                <figure class="absolute-bg" style="background-image: url('/assets/images/xcode-sm.jpg');"></figure>
               
             </div>
           
           <div class="card__container">
-            <h2 class="card__header">Money</h2>
-            <p class="card__count">1 Posts</p>
+            <h2 class="card__header">iOS</h2>
+            <p class="card__count">2 Posts</p>
             <span class="card__more">View All</span>
           </div>
         </a>

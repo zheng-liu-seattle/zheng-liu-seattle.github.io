@@ -5,49 +5,228 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 15 Nov 2016 00:11:45 -0800</pubDate>
-    <lastBuildDate>Tue, 15 Nov 2016 00:11:45 -0800</lastBuildDate>
+    <pubDate>Fri, 30 Dec 2016 22:21:30 -0800</pubDate>
+    <lastBuildDate>Fri, 30 Dec 2016 22:21:30 -0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>Options 101</title>
-        <description>&lt;h3 id=&quot;options-101&quot;&gt;Options 101&lt;/h3&gt;
-
-&lt;p&gt;把之前整理的期权相关的知识再次整理一下，增强记忆和理解。&lt;/p&gt;
-
-&lt;h4 id=&quot;long-call&quot;&gt;买入看涨期权（Long Call）：看涨股票时，一般可以买入看涨期权&lt;/h4&gt;
-
-&lt;p&gt;买入看涨期权意味着将来某个时间点你有权在特定的价格买入这支股票。
-例：假如你在2011年12月29日，以每合约$15.15的价格买入了GOOG的2012年1月的行权价为$650的看涨期权。2011年12月29日时GOOG的价格是$636，你的操作是：”buy to open GOOG-JAN-2012-$650-Calls”。代表你看涨GOOG，认为在2012年1月的行权日前GOOG会涨到$650以上。&lt;/p&gt;
-
-&lt;p&gt;buy to open calls&lt;/p&gt;
+        <title>Swift Error Handling</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;抛出异常&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;买入看跌期权（Long Put）：看跌股票时，一般可以买入看跌期权&lt;/li&gt;
+  &lt;li&gt;定义自己的异常，必须继承Error，可以通过自定义参数，传达一些信息&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;买入看跌期权意味着将来某个时间点你有权在特定的价格卖入这支股票。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;FetchMoneyError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Error&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;insurricientFunds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;moneyNeeded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notMyMoney&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;p&gt;buy to open put&lt;/p&gt;
+&lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;FetchMoneyError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;insurricientFunds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;moneyNeeded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;FetchMoneyError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notMyMoney&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;卖出看涨期权（Short Call）：看跌股票时，可以卖出看涨期权。高风险&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h1 id=&quot;handling-errors&quot;&gt;Handling Errors&lt;/h1&gt;
 
-&lt;p&gt;就像卖空股票似的，你卖出看涨期权，你不是花钱去买，而一开始是收钱。假如ABC这支股票的价格是$40，你以每合约$2.00，卖出了10个下个月的$45的看涨期权。（你是把下月行权日时以$45买入1000股ABC的权利卖出了。卖给谁你不需要管）这样你将收入$2000。别高兴太早，因为这$2000还不一定是你的呢。当下个月的行权日时，ABC的股价没有超过$45时，这$2000才属于你。但如果ABC的股价超过$45，你就需要被迫执行你卖出的看涨期权—（拥有你卖出的这个权利的人要求你）以$45卖出1000股ABC股票。如果在你的帐号没有1000股ABC的股票，你就必须从市场上以市场价买入1000股ABC，再卖出。这是最大的风险，因为在市场上ABC的股价已经超过了$45，可能是$55,可能是$145，也有可能是天价。当然行权日前在ABC股价上涨接近$45时，你可以选择平仓–买回卖出的看跌期权。这种情况的损失根据具体情况再分析。没有任何保护的卖出看涨期权，风险可能是你无法承受的大。&lt;/p&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;向上传递异常&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;canThrowErrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cannotThrowErrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;卖出看跌期权（Short Put）：看涨股票时，可以卖出看跌期权。高风险&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;抛出异常的function，叫做 &lt;em&gt;throwing function&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;同理你卖出看跌期权， 一开始是收钱的，但这钱还不一定是你的。还是以ABC股票为例，股价$40, 你以每合约$2.00，卖出了10个下个月的$35的看跌期权。这样你将收入$2000。（你是把下月行权日时以$35卖出1000股ABC的权利卖出了。）同样这$2000到下月行权日前暂时属于你。当下个月行权日时ABC没有跌过$35时，这$2000才是你的。如果ABC跌过了$35，你就需要被迫执行你卖出的看跌期权—（拥有你卖出的这个权利的人要求你）以$35买入1000股ABC股票，即使市场上的ABC已经一钱不值。没有任何保护的卖出看跌期权，最大风险就是你要按执行价格买入股票。&lt;/p&gt;
+&lt;h2 id=&quot;do-catch&quot;&gt;Do Catch&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pattern&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;use-optional&quot;&gt;Use Optional&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getMoney&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如果getMoney抛出异常，x就是nil&lt;/p&gt;
+
+&lt;h2 id=&quot;use-&quot;&gt;Use !&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try!&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getMoney&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;cleanup-actions&quot;&gt;Cleanup Actions&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;defer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;和Java里面的final类似，不管程序怎么样，保证当前scope内最后会被执行。如果定义了多个defer，按照定义的反向顺序执行&lt;/p&gt;
+
 </description>
-        <pubDate>Tue, 15 Nov 2016 00:00:00 -0800</pubDate>
-        <link>/2016/11/15/options-101/</link>
-        <guid isPermaLink="true">/2016/11/15/options-101/</guid>
+        <pubDate>Mon, 12 Dec 2016 00:00:00 -0800</pubDate>
+        <link>/2016/12/12/swift-error-handling/</link>
+        <guid isPermaLink="true">/2016/12/12/swift-error-handling/</guid>
         
         
-        <category>Money</category>
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>iOS Draw things animation</title>
+        <description>&lt;p&gt;最近工作需要，开始做了一些动态画图的活儿，顺便记录一下。&lt;/p&gt;
+
+&lt;p&gt;主要分为三个部分，1. 画路径 2. 加Layer 3.设置动画。 如果不需要动画，直接skip last step.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;CGMutablePath&lt;/strong&gt; 
+通过CGMutablePath来定义想要画画的路径 &lt;a href=&quot;https://developer.apple.com/reference/coregraphics/cgmutablepath&quot;&gt;Apple Doc&lt;/a&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift func move(to point: CGPoint, transform: CGAffineTransform = default)&lt;/code&gt;
+  把当前画笔的点挪到指定的点&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift func addLine(to point: CGPoint, transform: CGAffineTransform = default)&lt;/code&gt;
+  从当点的点，到指定的点，画一个线&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift func addRect(_ rect: CGRect, transform: CGAffineTransform = default)&lt;/code&gt;
+  从当前点开始，画一个给定的矩形&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift func addArc(center: CGPoint, radius: CGFloat, startAngle: CGFloat, endAngle: CGFloat, clockwise: Bool, transform: CGAffineTransform = default)&lt;/code&gt;
+  最复杂的一个，如果需要画rounded corner的时候，必须要用。注意第一个参数是圆形的圆心，&lt;code class=&quot;highlighter-rouge&quot;&gt;startAngle&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;endAngle&lt;/code&gt;是pai的相对值，如图所示:
+  &lt;img src=&quot;/assets/images/draw-angle-diagram.png&quot; alt=&quot;角度计算&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;CAShapeLayer&lt;/strong&gt;
+Layer，告诉UIView如何显示。&lt;a href=&quot;https://developer.apple.com/reference/quartzcore/cashapelayer&quot;&gt;Apple Doc&lt;/a&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift var fillColor: CGColor? { get set }&lt;/code&gt;
+  填充的颜色&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift var strokeColor: CGColor? { get set }&lt;/code&gt;
+  画的颜色&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift var path: CGPath? { get set }&lt;/code&gt;
+  画的路径，&lt;strong&gt;CGMutablePath&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift var strokeEnd: CGFloat { get set }&lt;/code&gt;
+  注意，如果设置为0，是不画的，如果需要第三部，动画效果，要先设置成0，否则1就可以&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift func add(_ anim: CAAnimation, 
+forKey key: String?)&lt;/code&gt;
+ 如果需要动画效果，需要call这个方法，key很关键，不能重复&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;CABasicAnimation&lt;/strong&gt; 动画定义 &lt;a href=&quot;https://developer.apple.com/reference/quartzcore/cabasicanimation&quot;&gt;Apple Doc&lt;/a&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift convenience init(keyPath path: String?)&lt;/code&gt;
+  此时的&lt;strong&gt;keyPath&lt;/strong&gt; value如果不正确，是没有动画效果的，如果是画线，可以用&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;strokeEnd&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;swift animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)&lt;/code&gt; 加入合适的时间方法&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;源代码在&lt;a href=&quot;https://github.com/zheng-liu-seattle/iOS-animation-demo&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 04 Dec 2016 00:00:00 -0800</pubDate>
+        <link>/2016/12/04/draw-animation/</link>
+        <guid isPermaLink="true">/2016/12/04/draw-animation/</guid>
+        
+        
+        <category>iOS</category>
+        
+      </item>
+    
+      <item>
+        <title>一个小程序猿的梦想</title>
+        <description>&lt;p&gt;曾几何时，做为程序猿的我，也曾经有过梦想，有过去实现这个梦想的激情。&lt;/p&gt;
+
+&lt;p&gt;每个程序员肯定都有梦想，什么bug-free code，pm都去死，或者startup，但是我的梦想很简单很实际，就是利用业余的时间，做一些app，符合以下要求:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;自己需要的&lt;/li&gt;
+  &lt;li&gt;市面上没有，或者死贵的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;仅此而已，其实真的很简单。&lt;/p&gt;
+
+&lt;p&gt;自从2009年踏上iOS的贼船，陆陆续续做过一些iOS的app，包括第一个在ipad上的画画app，在ios上可以随便听歌下载歌曲（只是cache）的mp3 app，没有pm，没有designer，都是自己觉得需要，就做了。&lt;/p&gt;
+
+&lt;p&gt;随着weibo的兴起，我也是刷weibo一族，手机刷完，网页刷，但是总觉得差点什么，对，desktop app。当时，mac上weibo有官方的app，是用Adobe Air做的，一个cheap的公司，做的app注定也是cheap的，除此之外，还有几个不火的native应用，但是都不符合我的要求，于是开始了做WeiLark之旅。&lt;/p&gt;
+
+&lt;p&gt;最开始从0到1，是和我的好兄弟一起做的，当他听到我的idea的时候，一拍即合，这是我做的第一个mac app，我俩都是非著名码农，但是很快就做出了第一个版本。这个app曾经在App Store China mainland 区常年排在免费排行榜的前几名。&lt;/p&gt;
+
+&lt;p&gt;由此可见，梦想很简单，做自己想要的，需要的，然后大家一起用，不挣一分钱，不出一丝名。关于这个app，虽然回首看code，简直忍无可忍，但是是我目前做过的最happpy的一个app，因为我不是一个人在战斗，有时候，真的很想他，不知道他怎么样了，虽然我们此时的距离不超过一英里。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/weilark.jpg&quot; alt=&quot;WeiLark&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;曾经的梦想，已经远去了好久，是时候追回来了。&lt;/p&gt;
+
+&lt;p&gt;Follow your passion.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 27 Nov 2016 00:00:00 -0800</pubDate>
+        <link>/2016/11/27/sde-dream/</link>
+        <guid isPermaLink="true">/2016/11/27/sde-dream/</guid>
+        
+        
+        <category>Life</category>
+        
+      </item>
+    
+      <item>
+        <title>北京 - 雪</title>
+        <description>&lt;p&gt;北京，又下雪了。&lt;/p&gt;
+
+&lt;p&gt;其实，有高原红的我，本来是不喜欢雪的，因为这意味着我的大脸又要红扑扑的了。但是我却是一直盼望下雪，因为，下雪就可以不上体育课了，一个胖子的心声，估计大多人都不懂。&lt;/p&gt;
+
+&lt;p&gt;出国十年，每次看到北京初雪的照片，都分外想家，想故宫的角楼，想鼓楼的钟楼，想冬天里的糖葫芦，只有看照片解馋。&lt;/p&gt;
+
+&lt;p&gt;想北京了。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Nov 2016 00:00:00 -0800</pubDate>
+        <link>/2016/11/22/beijing-snow/</link>
+        <guid isPermaLink="true">/2016/11/22/beijing-snow/</guid>
+        
+        
+        <category>Life</category>
+        
+      </item>
+    
+      <item>
+        <title>时间</title>
+        <description>&lt;p&gt;TBD&lt;/p&gt;
+</description>
+        <pubDate>Sun, 20 Nov 2016 00:00:00 -0800</pubDate>
+        <link>/2016/11/20/tldr/</link>
+        <guid isPermaLink="true">/2016/11/20/tldr/</guid>
+        
+        
+        <category>Life</category>
+        
+      </item>
+    
+      <item>
+        <title>时间</title>
+        <description>&lt;p&gt;年轻的时候，总是以自己每天只需要睡6个小时而沾沾自喜，因为跟正常人的8-10个小时睡眠比起来，我一周比别人多半天，可以做很多很多事情。&lt;/p&gt;
+
+&lt;p&gt;有了孩子，买了house，加入了start up，才慢慢意识到，时间，并不是一切，如果不把时间用到合适的地方，再多的时间，也没有用，只会让自己徒有那种&lt;strong&gt;忙&lt;/strong&gt;的满足感，但是并没有使自己有任何进步。&lt;/p&gt;
+
+&lt;p&gt;当有时间的时候，是打游戏，还是收拾屋子，还是陪孩子，还是看会工作的书，或者加班？我相信，不管时间是不是碎片，只要用到正确的地方，总会量变引起质变的。&lt;/p&gt;
+
+&lt;p&gt;希望越来越老的我，不再浪费时间。&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Nov 2016 00:00:00 -0800</pubDate>
+        <link>/2016/11/19/value-time/</link>
+        <guid isPermaLink="true">/2016/11/19/value-time/</guid>
+        
+        
+        <category>Life</category>
         
       </item>
     
