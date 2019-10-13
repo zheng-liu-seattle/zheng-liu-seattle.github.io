@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Server-Sent Events"
-date: 2019-7-10
+date: 2019-10-12
 categories:
   - work
 description:
