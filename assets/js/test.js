@@ -1,6 +1,13 @@
-alert('here123333');
-var tag = document.createElement("div");
-tag.style="height:300px;background-color:red;width:100%;";
-var text = document.createTextNode("Tutorix is the best e-learning platform");
-tag.appendChild(text);
-document.body.appendChild(tag);
+//bottom
+var bottomTag = document.createElement("div");
+bottomTag.style="height:20px;background-color:#DC222C;width:100%;text-align: center;";
+var text = document.createTextNode("Apply Your Credit Card Today.");
+bottomTag.appendChild(text);
+document.body.appendChild(bottomTag);
+
+//top
+var topTag = document.createElement("div");
+topTag.style="height:20px;background-color:#DC222C;width:100%;text-align: center;";
+var text = document.createTextNode("Apply Your Credit Card Today.");
+topTag.appendChild(text);
+document.body.appendChild(topTag);
