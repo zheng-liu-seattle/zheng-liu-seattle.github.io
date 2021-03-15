@@ -57,13 +57,18 @@ modal.innerHTML = `<div id="myModal" class="modal">
 </div>`;
 document.body.appendChild(modal);
 
-$('.smartbar-bar__link').click(function(e){
+var myFunction = function() {
     alert("modal");
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
     e.preventDefault();
     e.stopPropagation();
-});
+};
+
+var elements = document.getElementsByClassName("smartbar-bar__link");
+for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', myFunction, false);
+}
 
 window.onclick = function(event) {
     var modal = document.getElementById("myModal");
