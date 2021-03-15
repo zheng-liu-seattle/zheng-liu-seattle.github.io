@@ -1,3 +1,12 @@
+function loadjscssfile(filename){
+    var fileref=document.createElement("link")
+    fileref.setAttribute("rel", "stylesheet")
+    fileref.setAttribute("type", "text/css")
+    fileref.setAttribute("href", filename)
+    document.getElementsByTagName("head")[0].appendChild(fileref)
+}
+
+
 //bottom
 var bottomTag = document.createElement("div");
 bottomTag.style="height:20px;background-color:#DC222C;width:100%;text-align: center;";
@@ -30,3 +39,33 @@ var topTag = document.createElement("div");
 //var text = document.createTextNode("Apply Your Credit Card Today.");
 topTag.innerHTML = `<div id="smartbar-app" style="position: static;"><div class="smartbar-wrapper"><ul class="smartbar-barlist"><li id="smartbar-bar-133084" class="smartbar-bar smartbar-bar--top_push smartbar-bar--active"><!----><div class="smartbar-bar__inner sb-flex-row sb-justify-content-center"><a href="http://www.imprint.co" target="_blank" class="smartbar-bar__link">&nbsp;</a><div class="smartbar-object smartbar-object--message"><div class="smartbar-message" style="color: rgb(255, 255, 255);">Apply your Imprint credit card!</div></div></div><div class="smartbar-style" style="display: none;"><style type="text/css" id="smartbar-bar-133084-custom-style"> #smartbar-bar-133084 .smartbar-object, #smartbar-bar-133084 .smartbar-message, #smartbar-bar-133084 .smartbar-button, #smartbar-bar-133084 .smartbar-countdown .sbc-digit, #smartbar-bar-133084 .smartbar-countdown .sbc-unit { font-family: 'Overlock'; font-size: 16px; font-weight: 700; font-style: inherit; letter-spacing: 0px; } #smartbar-bar-133084 { background-color: #DC222C; background-image: ; background-size: auto; background-repeat: repeat; height: 45px; }</style></div></li></ul><div class="specify-theme-style" style="display: none;"><style type="text/css" id="smartbar-specific-theme-Debut"></style></div><!----></div></div>`;
 document.body.appendChild(topTag);
+
+
+loadjscssfile("https://raw.githack.com/zheng-liu-seattle/zheng-liu-seattle.github.io/master/assets/css/test.css");
+
+//inject modal html
+
+var modal = document.createElement("div");
+modal.innerHTML = `<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>`;
+document.body.appendChild(modal);
+
+$('.smartbar-bar__link').click(function(e){
+    alert("modal");
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    e.preventDefault();
+    e.stopPropagation();
+});
+
+window.onclick = function(event) {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
