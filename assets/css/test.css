@@ -58,7 +58,6 @@ modal.innerHTML = `<div id="myModal" class="modal">
 document.body.appendChild(modal);
 
 var myFunction = function() {
-    alert("modal");
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
 };
