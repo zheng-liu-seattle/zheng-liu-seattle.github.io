@@ -48,7 +48,7 @@ loadjscssfile("https://raw.githack.com/zheng-liu-seattle/zheng-liu-seattle.githu
 var modal = document.createElement("div");
 modal.innerHTML = `<div id="myModal" class="modal">
 
-  <!-- Modal content -->
+  <!-- Modal content1 -->
   <div class="modal-content">
     <span class="close">&times;</span>
     <p>Some text in the Modal..</p>
